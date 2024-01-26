@@ -59,6 +59,13 @@
          `
           );
         });
+        const buttonEl = document.querySelectorAll('.remove');
+        buttonEl.forEach((el) => {
+          el.addEventListener('click', () => {
+            const delProd = el.closest('.card');
+            delProd.remove();
+          });
+        });
       } catch (error) {
         console.log(error);
       }
