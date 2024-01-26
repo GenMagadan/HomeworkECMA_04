@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  background-color: rgb(88, 88, 88);
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  border: thin #c0c0c0 solid;
+  padding: 5px;
+  min-width: 360px;
+  margin: auto;
+  background-color: #947070;
+  border-radius: 10px;
+  position: relative;
+}
+.remove {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style-type: none;
+}
+.address li {
+  padding-left: 20px;
+}
+span {
+  color: beige;
+}

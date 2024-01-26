@@ -6,14 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="container"></div>
-    <div class="card">
-      <!-- <h4 class="name">User:<span></span></h4>
-      <h4 class="username">Username:<span></span></h4>
-      <h4 class="email">Email:<span></span></h4> -->
+    <div class="container">
       <!-- <ul>
         <li class="name">User:<span></span></li>
         <li class="username">Username:<span></span></li>
@@ -43,19 +40,22 @@
           container.insertAdjacentHTML(
             'beforeend',
             `
+         <div class="card">
+         <p class="remove">X</p>
          <ul>
-            <li class="name">User:<span>${el.name}</span></li>
-            <li class="username">Username:<span>${el.username}</span></li>
-            <li class="email">Email:<span>${el.email}</span></li>
+            <li class="name">User: <span>${el.name}</span></li>
+            <li class="username">Username: <span>${el.username}</span></li>
+            <li class="email">Email: <span>${el.email}</span></li>
             <li class="address">
               Address:
                <ul>
-                 <li class="street">Street:<span>${el.address.street}</span></li>
-                 <li class="suite">SUite:<span>${el.address.suite}</span></li>
-                 <li class="city">City:<span>${el.address.city}</span></li>
+                 <li class="street">Street: <span>${el.address.street}</span></li>
+                 <li class="suite">SUite: <span>${el.address.suite}</span></li>
+                 <li class="city">City: <span>${el.address.city}</span></li>
                </ul>
             </li>
          </ul>
+         </div>
          `
           );
         });
