@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="card">
+      <!-- <h4 class="name">User:<span></span></h4>
+      <h4 class="username">Username:<span></span></h4>
+      <h4 class="email">Email:<span></span></h4> -->
+      <!-- <ul>
+        <li class="name">User:<span></span></li>
+        <li class="username">Username:<span></span></li>
+        <li class="email">Email:<span></span></li>
+        <li class="address">
+          Address:
+          <ul>
+            <li class="street">Street:<span></span></li>
+            <li class="suite">SUite:<span></span></li>
+            <li class="city">City:<span></span></li>
+          </ul>
+        </li>
+      </ul> -->
+    </div>
+    <script type="module">
+      const container = document.querySelector('.container');
+      const url = 'https://jsonplaceholder.typicode.com/users';
+      const getUser = async (api) => {
+        const result = await fetch(api);
+        const dataUser = await result.json();
+        return dataUser;
+      };
+      try {
+        const data = await getUser(url);
+        console.log(data);
+        data.forEach((el) => {
+          container.insertAdjacentHTML(
+            'beforeend',
+            `
+         <ul>
+            <li class="name">User:<span>${el.name}</span></li>
+            <li class="username">Username:<span>${el.username}</span></li>
+            <li class="email">Email:<span>${el.email}</span></li>
+            <li class="address">
+              Address:
+               <ul>
+                 <li class="street">Street:<span>${el.address.street}</span></li>
+                 <li class="suite">SUite:<span>${el.address.suite}</span></li>
+                 <li class="city">City:<span>${el.address.city}</span></li>
+               </ul>
+            </li>
+         </ul>
+         `
+          );
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    </script>
+  </body>
+</html>
