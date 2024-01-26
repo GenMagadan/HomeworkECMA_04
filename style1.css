@@ -7,7 +7,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  background-color: rgb(88, 88, 88);
+  background-color: rgb(216, 200, 200);
   gap: 20px;
   padding: 20px;
 }
